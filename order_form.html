@@ -1,0 +1,67 @@
+// <!DOCTYPE html>
+ <!-- <?php
+$message = '';
+if (isset($_GET['success'])) {
+    $message = "Pedido realizado con éxito";
+} elseif (isset($_GET['error'])) {
+    $message = "Error: " . htmlspecialchars($_GET['error']);
+}
+?>
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Realizar Pedido • Tennis Pro</title>
+  <style>
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+    footer { background: #111; color: #aaa; text-align: center; padding: 10px; }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Tennis Pro</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+    </nav>
+  </header>
+  <div class="container py-5">
+    <h1 class="mb-4">Realiza tu pedido</h1>
+    <?php if ($message): ?>
+    <div class="alert alert-info"><?php echo $message; ?></div>
+<?php endif; ?>
+    <form action="process_order.php" method="POST">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Completo</label>
+        <input type="text" name="nombre" id="nombre" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" name="email" id="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" name="telefono" id="telefono" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="producto" class="form-label">Producto (modelo y talla)</label>
+        <input type="text" name="producto" id="producto" class="form-control" placeholder="e.g., retro 12 – Talla 26" required>
+      </div>
+      <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección de Entrega</label>
+        <textarea name="direccion" id="direccion" class="form-control" rows="2" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="cantidad" class="form-label">Cantidad</label>
+        <input type="number" name="cantidad" id="cantidad" class="form-control" value="1" min="1" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+    </form>
+  </div>
+  <footer>
+    <p>&copy; 2025 Tennis Pro. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

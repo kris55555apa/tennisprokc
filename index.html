@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tennis Pro • Tu tienda de tenis Nike</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+    .hero { background: url('hero-nike-tennis.jpg') center/cover no-repeat; height: 300px; }
+    .container { padding: 20px; }
+    .products { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; width: calc(33% - 20px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+    .card img { width: 100%; height: auto; }
+    .card h3 { margin: 10px; }
+    .card p { margin: 0 10px 10px; }
+    footer { background: #111; color: #aaa; text-align: center; padding: 10px; }
+    .back { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('logo.jpg') center/cover no-repeat; z-index: -1; }
+    body > .container, body > header, body > footer { position: relative; z-index: 1; }
+    body { overflow-y: auto; }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Tennis Pro</h1>
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="order_form.html">Pedidos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="comercial.html">Estelares</a>
+  </nav>
+</header>
+
+<section class="back">
+  <div style="text-align: center;">
+    <img src="logo.jpg" alt="Logo">
+  </div>
+</section>
+
+<main class="container">
+  <section id="productos">
+    <h2>Lo más popular en tenis Nike</h2>
+    
+    <div class="products">
+      <div class="card">
+        <img src="jordan12.jpg" alt="JORDAN 12">
+        <h3>JORDAN 12</h3>
+        <p>TENIS PARA BASQUETBAL – 2500$</p>
+      </div>
+      <div class="card">
+        <img src="jordan3.jpg" alt="JORDAN 3">
+        <h3>JORDAN 3</h3>
+        <p>TENIS PARA BASQUETBAL – 4000$</p>
+      </div>
+      <div class="card">
+        <img src="retro 4.jpg" alt="JORDAN RETRO 4">
+        <h3>JORDAN RETRO 4</h3>
+        <p>TENIS PARA BASQUETBAL – 4800$</p>
+      </div>
+      <div class="card">
+        <img src="retro11.jpg" alt="JORDAN RETRO 11">
+        <h3>JORDAN RETRO 11</h3>
+        <p>TENIS PARA BASQUETBAL – 3000$</p>
+      </div>
+      <div class="card">
+        <img src="alpha.jpg" alt="JORDAN 12">
+        <h3>JORDAN 12</h3>
+        <p>TENIS Deportivos CASUALES – 1700$</p>
+      </div>
+      <div class="card">
+        <img src="zoom.jpg" alt="Nike Air Zoom Spiridon Cage 2 - Zapatillas Deportivas para Hombre">
+        <h3>Nike Air Zoom</h3>
+        <p>TENIS CASUALES – 1500$</p>
+      </div>
+    </div>
+    <a href="productos2.html">ver más productos</a>
+  </section>
+  
+  <section id="servicios">
+    <h2>Servicios premium de Tennis Pro</h2>
+    <ul>
+      <li>Personalización de tenis con <strong>Nike By You</strong></li>
+      <li>Asesoría técnica para elegir el calzado según tu estilo de juego.</li>
+      <li>Envío gratuito en CDMX y alrededores.</li>
+    </ul>
+  </section>
+
+  <section id="historia">
+    <h2>Sobre Nike Tennis</h2>
+    <p>Nike domina el mercado de equipamiento de tenis profesional, por arriba de otras marcas.</p>
+  </section>
+
+ <section id="contacto">
+  <h2>Contáctanos, Y SIGUENOS EN NUESTRAS REDES SOCIALES</h2>
+  <p>
+    Instagram: <a href="https://www.instagram.com/nike?igsh=Y2Rnbm5kbHJIcGpz" target="_blank">@nike</a>
+  </p>
+  <p>
+    Facebook: <a href="https://www.facebook.com/share/1CA6CJFRY/?mibextid=wwXlfr" target="_blank">NIKE OFICIAL</a>
+  </p>
+  <p>Teléfono: 55 1234 5678</p>
+  <p>Dirección: Cecytem Tierra Blanca, Edo. México, Ecatepec.</p>
+</section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Tennis Pro. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
